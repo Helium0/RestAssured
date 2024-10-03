@@ -5,6 +5,7 @@ import api.payload.User;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class EndpointsTests {
@@ -13,8 +14,8 @@ public class EndpointsTests {
     User user;
 
 
-    @Test (priority = 1)
-    public void postUserTest () {
+    @BeforeClass
+    private void setUpData () {
         faker = new Faker();
         user = new User();
 
@@ -24,7 +25,10 @@ public class EndpointsTests {
         user.setEmail(faker.internet().emailAddress());
         user.setPassword(faker.internet().password());
         user.setPhone(faker.phoneNumber().cellPhone());
+    }
 
+    @Test (priority = 1)
+    public void postUserTest () {
         Response response = UserEndpoints.postUser(user);
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
@@ -56,7 +60,6 @@ public class EndpointsTests {
     @Test (priority = 4)
     public void deleteUserTest () {
         Response response = UserEndpoints.deleteUser(this.user.getUsername());
-        response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
     }
 

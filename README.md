@@ -1,7 +1,7 @@
 # This is my another private project where I check my knowledge about API testing. For this purpose I used https://petstore.swagger.io/. 
 
 So far I managed and created tests for simple CRUD user endpoints.
-My goal is to extend those tests for the other user endpoints. Also I want to take care of on pet and store labels.
+My goal is to extend those tests for the other user endpoints. Also I want to take care of on another areas like pet and store.
 
 What I used in my project:
 - Java programming Language

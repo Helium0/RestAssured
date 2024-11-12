@@ -9,6 +9,9 @@ What I used in my project:
 - OOP methodology
 - KISS and DRY programming principles
 
+There are different approchaes for creating dummy data and I choosed 2 of them:
+- providing data from excel file
+- using additional library called Faker library
 
 
 

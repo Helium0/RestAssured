@@ -1,9 +1,9 @@
 # This is my another private project where I check my knowledge about API testing. For this purpose I used https://petstore.swagger.io/. 
 
-So far I managed and created tests for simple CRUD user endpoints.
-My goal is to extend those tests for the other user endpoints. Also I want to take care of on another areas like pet and store.
+So far I have managed and created tests for simple CRUD user endpoints.
+My goal is to extend those tests for another user endpoints. Also I want to take care of different areas like pet and store endpoints.
 
-What I used in my project:
+# Technologies, tools and methodologies which I used:
 - Java programming Language
 - Selenium and Maven tools
 - OOP methodology
